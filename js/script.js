@@ -24,21 +24,27 @@ setInterval(() => { //Vamos comprobando si el menú está abierto o cerrado, par
         }
     }}, 100)
 
-    //Formulario
-    let env = document.getElementById("enviar")
-    let n = document.forms[0].nombre
-    let e = document.forms[0].email
-    n.addEventListener("focusout", validar);
-    e.addEventListener("focusout", validar);
+//Formulario
+let error = document.getElementById("error");
+let env = document.getElementById("enviar");
+let n = document.forms[0].nombre;
+let e = document.forms[0].email;
+let a = document.forms[0].area;
+n.addEventListener("blur", validar);
+e.addEventListener("focusout", validar);
+//expresion regular 
+/* let re = /^.+@.+\..+$/; */
+let re = /.+\@.+/;
+e.addEventListener("keypress", (event) => {if (event.shiftKey) {alert("No debes  escribir mayúsculas")}})
+function validar() //Podemos ver que de esta forma no se puede acceder al text area hasta que no estén rellenos los otros dos campos
+{ 
+    if(!n.checkValidity())
+        {n.reportValidity()}
 
-    function validar(){ //Podemos ver que de esta forma no se puede acceder al text area hasta que no estén rellenos los otros dos campos
-        if(!n.checkValidity())
-        {
-            n.reportValidity()
-        }
-        else if(!e.checkValidity())
-        {
-            e.reportValidity()
-        }
+    else if(!e.checkValidity())
+        {e.reportValidity()}
+
+    else {
+        a.removeAttribute("disabled")
+    }
 }
-    
