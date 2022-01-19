@@ -32,19 +32,18 @@ let e = document.forms[0].email;
 let a = document.forms[0].area;
 n.addEventListener("blur", validar);
 e.addEventListener("focusout", validar);
-//expresion regular 
-/* let re = /^.+@.+\..+$/; */
-let re = /.+\@.+/;
+//expresion regular se tiene en cuenta en el html
 e.addEventListener("keypress", (event) => {if (event.shiftKey) {alert("No debes  escribir mayúsculas")}})
 function validar() //Podemos ver que de esta forma no se puede acceder al text area hasta que no estén rellenos los otros dos campos
 { 
     if(!n.checkValidity())
-        {n.reportValidity()}
+        {n.setCustomValidity("Tienes que introducir tu nombre")
+        n.reportValidity()}
 
     else if(!e.checkValidity())
         {e.reportValidity()}
 
     else {
         a.removeAttribute("disabled")
-    }
+    }   
 }
