@@ -152,6 +152,16 @@ main {
   border: solid 1px black;
   margin: 10px;
 }
+.proyecto > picture > img{
+  width: 40vw;
+  border: solid 1px black;
+  margin: 10px;
+  transition: filter 0.5s;
+}
+.proyecto > picture > img:hover {
+  filter: grayscale(100%);
+
+}
 .proyecto > p {
   width: 50vw;
   padding: 30px;
@@ -406,6 +416,12 @@ footer{
     padding-top: 30px;
   }
   .proyecto > img {
+    margin: 0;
+    width: 100%;
+    height: 75%;
+    border: solid 1px black;
+  }
+  .proyecto > picture > img {
     margin: 0;
     width: 100%;
     height: 75%;
