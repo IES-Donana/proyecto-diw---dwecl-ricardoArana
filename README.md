@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 # Proyecto DIW - DWECL
 
 ## ÍNDICE   
