@@ -136,6 +136,20 @@
       <a href="pag/mis_proyectos.html"> aquí </a> o ir al enlace de arriba "Mis proyectos".
      </p>
 
+  <button id="myBtn">¡Contacta conmigo!</button>
+
+
+  <div id="myModal" class="modal">
+
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h1>Puedes enviarme un correo desde la página de contacto</h1>
+    <p>Correo: ricardo.romero@iesdonana.org</p>
+    <p>También puedes revisar mis redes sociales.</p>
+  </div>
+
+</div>
   </div>
   </main>
   <footer>
@@ -146,5 +160,26 @@
       <a href="https://gitbub.com"> <img src="img/github.png" alt=""></a> 
     </div>
   </footer>
+  <script>
+    var modal = document.getElementById("myModal");
+    
+    var btn = document.getElementById("myBtn");
+    
+    var span = document.getElementsByClassName("close")[0];
+    
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
 </body>
 </html>
