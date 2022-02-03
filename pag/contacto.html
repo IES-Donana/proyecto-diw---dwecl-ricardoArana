@@ -39,20 +39,23 @@
       <h1>Contacto:</h1>
       <h2>Puedes enviarme un correo:</h2>
       <form id="form">
+        <label for="nombre">Nombre</label>
         <input name="nombre" class="text" type="text" size="40" maxlength="30" placeholder="Tu nombre completo..." required> <br>
+        <label for="email">Email</label>
         <input name="email" class="text" type="text" size="40" maxlength="40" pattern="^.+@.+\..+$" placeholder="Tu correo..." required> <br>
         <p id="error"></p>
         <textarea name="area" disabled rows="8" cols="40" placeholder="Escribe tu mensaje..." required></textarea> <br>
-        <button id="enviar" type="submit">Enviar</button>
+        <label for="area"><button id="enviar" type="submit">Enviar</button></label>
+        
         <span>Debes rellenar todos los campos</span>
       </form>
     </div>
     <div id="redes_sociales">
 
       <h2>También puedes echarle un ojo a mis redes sociales:</h2>
-      <a href="https://twitter.com"> <img src="../img/twitter.png" alt=""></a> <div>Twitter</div> <br>
-      <a href="https://instagram.com"> <img src="../img/instagram.png" alt=""></a> <div>Instagram</div><br> 
-      <a href="https://gitbub.com"> <img src="../img/github.png" alt=""></a> <div>¡Y en Github! </div><br>
+      <a href="https://twitter.com"> <img src="../img/twitter.png" alt="link a Twitter"></a> <div>Twitter</div> <br>
+      <a href="https://instagram.com"> <img src="../img/instagram.png" alt="link a Instagram"></a> <div>Instagram</div><br> 
+      <a href="https://gitbub.com"> <img src="../img/github.png" alt="link a GitHub"></a> <div>¡Y en Github! </div><br>
 
     </div>
   </div>
