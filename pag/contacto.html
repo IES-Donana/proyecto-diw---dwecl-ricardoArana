@@ -40,11 +40,11 @@
       <h2>Puedes enviarme un correo:</h2>
       <form id="form">
         <label for="nombre">Nombre</label>
-        <input name="nombre" class="text" type="text" size="40" maxlength="30" placeholder="Tu nombre completo..." required> <br>
+        <input name="nombre" id="nombre" class="text" type="text" size="40" maxlength="30" placeholder="Tu nombre completo..." required> <br>
         <label for="email">Email</label>
-        <input name="email" class="text" type="text" size="40" maxlength="40" pattern="^.+@.+\..+$" placeholder="Tu correo..." required> <br>
+        <input name="email" id="email"class="text" type="text" size="40" maxlength="40" pattern="^.+@.+\..+$" placeholder="Tu correo..." required> <br>
         <p id="error"></p>
-        <textarea name="area" disabled rows="8" cols="40" placeholder="Escribe tu mensaje..." required></textarea> <br>
+        <textarea name="area" id="area" disabled rows="8" cols="40" placeholder="Escribe tu mensaje..." required></textarea> <br>
         <label for="area"><button id="enviar" type="submit">Enviar</button></label>
         
         <span>Debes rellenar todos los campos</span>
