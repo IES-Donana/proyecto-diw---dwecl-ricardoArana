@@ -102,6 +102,13 @@ to {
   margin-left: 12.5vw;
 }
 }
+.titulo {
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: xx-large;
+  text-decoration: underline;
+}
 
 #correo {
   width: 37.5vw;
@@ -184,19 +191,13 @@ main {
   justify-content: space-between;
   padding-top: 30px;
 }
-.proyecto > img {
-  width: 400px;
-  height: 300px;
-  border: solid 1px black;
-  margin: 10px;
-}
-.proyecto > picture > img{
+.proyecto img {
   width: 40vw;
   border: solid 1px black;
   margin: 10px;
   transition: filter 0.5s;
 }
-.proyecto > picture > img:hover {
+.proyecto img:hover {
   filter: grayscale(100%);
 
 }
@@ -505,13 +506,7 @@ footer{
     align-items: center;
     padding-top: 30px;
   }
-  .proyecto > img {
-    margin: 0;
-    width: 100%;
-    height: 75%;
-    border: solid 1px black;
-  }
-  .proyecto > picture > img {
+  .proyecto img {
     margin: 0;
     width: 100%;
     height: 75%;
