@@ -12,6 +12,7 @@ body {
   opacity: 10%;
 }
 header {
+
   border-bottom: 1px solid black;
     font-family: 'Times New Roman', Times, serif;
     height: 100px;
@@ -63,8 +64,25 @@ header > #link {
     text-align: left;
     float:right; 
     clear:right;
-
 }
+#conteBread{
+  padding-top: 2vh;
+  font-size: large;
+}
+
+#breadcrumb {
+  text-decoration: none;
+  color: darkblue;
+  margin-left: 2vw;
+}
+
+#breadcrumb:hover {
+  color: black;
+}
+header > #link > a:visited {
+  color: rgb(48, 48, 48);
+} 
+
 header > h1 > a {
   text-decoration: none;
   color: black;
@@ -402,11 +420,8 @@ main {
     width: 40vw;
   }
 
-  .video > iframe{
-    width: 100%;
-  }
   .video > video{
-    width: 100%;
+    width: 40vw;
   }
   
 #subir > p {
@@ -504,6 +519,9 @@ footer{
   .video > iframe{
     width: 100%;
     height: auto;
+  }
+  #email{
+    display: none;
   }
   .proyecto {
     display: block;
