@@ -32,8 +32,7 @@ header {
   display: none;
 }
 #logo {
-  margin-top: 15px;
-  margin-left: 30px;
+  margin: 15px;
   height: 65px;
   width: auto;
   animation-duration: 2s;
@@ -48,48 +47,58 @@ header {
     margin-top: 15px;
   }
 }
-header > h1 {
+header h1 {
     margin: 0.3em auto 0em;
     padding-left: 4.5em;
     text-align: center;
     font-size: 3em;
     display: block;
 }
+#logoTitulo {
+  width: 100%;
+}
 
 header > #link {
     margin: 3em 3em;
     top: 20px;
-    width: 7em;
+    width: 10em;
     height: 5vh;
     text-align: left;
     float:right; 
     clear:right;
 }
-#conteBread{
-  padding-top: 2vh;
-  font-size: large;
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
 }
-
-#breadcrumb {
-  text-decoration: none;
-  color: darkblue;
-  margin-left: 2vw;
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
 }
-
-#breadcrumb:hover {
+ul.breadcrumb li+li:before {
+  padding: 8px;
   color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: black;
+  text-decoration: underline;
 }
 header > #link > a:visited {
   color: rgb(48, 48, 48);
 } 
 
-header > h1 > a {
+header a {
   text-decoration: none;
   color: black;
   transition: color .7s;
 }
 
-header > h1 > a:hover {
+header a:hover {
   color: blue;
 }
 header > #link > a {
@@ -370,6 +379,9 @@ main {
     text-decoration: none;
     cursor: pointer;
   }
+  #logoTitulo {
+    display: flex;
+  }
   
   /* Media queries - Se adapta toda la linea del tiempo a la izquierda cuando la pantalla es menor
                      de 800px */
@@ -401,6 +413,8 @@ main {
     .left::after, .right::after {
       left: 15px;
     }
+
+    
   
   /* Cambia los contenedores de la derecha para que actuen como los de la izquierda */
     .right {
@@ -449,6 +463,9 @@ footer{
     flex-direction: column;
 
   }
+  #logo {
+    animation-duration: 0;
+  }
   #cont_bur {
     display: flex;
     background-color: rgb(92, 201, 252);
@@ -481,11 +498,16 @@ footer{
     display: block;
     border: none;
   }
+  .breadcrumb {
+    margin-top: 10vh;
+  }
   #link {
     display: none;
   }
-  header > h1 {
-    margin: 0px;
+  header h1 {
+
+    width: 80%;
+    margin-top: 15px;
     text-align: center;
     padding-left: 0em;
   }
