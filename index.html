@@ -8,6 +8,7 @@
 <link rel="icon" 
       type="image/ico" 
       href="img/favicon.ico">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <script src="/js/script.js" defer></script>
   <title>Portafolio: Ricardo Romero Arana</title>
 </head>
@@ -44,13 +45,11 @@
     <li>Inicio</li>
   </ul>
   <main>
-    <div id="wrap">
-      <form action="" autocomplete="on">
-        <label for="search" hidden>buscar</label>
-      <input id="search" name="search" type="text" placeholder="¿Qué estás buscando?">
-      <input id="search_submit" value="Rechercher" type="submit">
+      <form id="buscador" action="">
+        <input id="buscadorInput" type="search" required>
+        <i class="fa fa-search"></i>
       </form>
-    </div>
+
     <div class="titulo"> Inicio </div>
     <div id="presentacion">
       
@@ -192,7 +191,17 @@
       if (event.target == modal) {
         modal.style.display = "none";
       }
-    }
+    } 
+
+    // Buscador 
+
+const clearInput = () => {
+  const input = document.getElementsByTagName("input")[0];
+  input.value = "";
+}
+
+const clearBtn = document.getElementById("clear-btn");
+clearBtn.addEventListener("click", clearInput);
     </script>
 </body>
 </html>
