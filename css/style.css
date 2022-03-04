@@ -191,9 +191,9 @@ main {
     filter: blur(3px);
     transition: .6s ease-in-out;
     padding-left: 3vw;
-    padding-top: 5vh;
-    width: 185px;
-    height: 200px;
+    padding-top: 2vh;
+    width: 170px;
+    height: 220px;
   }
   .imagen:hover > img {
     -webkit-filter: blur(0);
