@@ -8,6 +8,7 @@
 <link rel="icon" 
       type="image/ico" 
       href="img/favicon.ico">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <script src="/js/script.js" defer></script>
   <title>Portafolio: Ricardo Romero Arana</title>
 </head>
@@ -20,10 +21,10 @@
     <div id="video_fondo">
       <video src="video/fondo.mp4" loop autoplay preload="auto" muted></video>
     </div>
-    <div>
+    <div id="logoTitulo">
     <img src="img/logo.png" alt="Logo del portafolio." id="logo">
+    <h1> <a href="index.html"> Mi Portafolio</a></h1>
   </div>
-    <h1> <a href="index.html"> Mi Portafolio </a></h1>
     <div id="link">
     <a href="pag/mis_proyectos.html">&#8226; Mis proyectos</a> <br>
     <a href="pag/contacto.html">&#8226; Contacto</a>
@@ -40,7 +41,16 @@
   </div>
 </div>
   </header>
+  <ul class="breadcrumb">
+    <li>Inicio</li>
+  </ul>
   <main>
+      <form id="buscador" action="">
+        <input id="buscadorInput" type="search" required>
+        <i class="fa fa-search"></i>
+      </form>
+
+    <div class="titulo"> Inicio </div>
     <div id="presentacion">
       
       <div class="imagen">
@@ -115,8 +125,8 @@
       <video src="video/testimonio.mp4" controls muted poster="img/testimonio.png"></video>
   </div>
   <div>
-    <p> Testimonio de Isaura sobre mi paso por la empresa de Develapps: "Demostró adaptarse al entorno de trabajo rápidamente para ser eficiente en su labor, 
-        tener una buena comunicación con los compañeros y gran profesionalidad" </p>
+    <p> Testimonio de Isaura sobre mi paso por la empresa de Develapps: "muy satisfecha con su trabajo,
+      recomiendo encarecidamente su trabajo." </p>
   </div>
 </div>
 <div>
@@ -125,7 +135,7 @@
       <video src="video/testimonio.mp4" controls muted poster="img/testimonio2.jpg"></video>
     </div>
     <div>
-      <p> Testimonio de Damián sobre mi paso por la empresa de Minsait: "Tan callado que parecía que no estaba ahí, pero en términos de trabajo no falló ninguna vez " </p>
+      <p> Testimonio de Damián sobre mi paso por la empresa de Minsait: "Un programador junior con un futuro prometedor, estoy seguro." </p>
       </div>
 </div>
 
@@ -146,7 +156,7 @@
     <span class="close">&times;</span>
     <h1>Puedes enviarme un correo desde la página de contacto</h1>
     <p>Correo: ricardo.romero@iesdonana.org</p>
-    <p>También puedes revisar mis redes sociales.</p>
+    <p>También puedes revisar mis redes sociales (abajo a la derecha).</p>
   </div>
 
 </div>
@@ -154,6 +164,7 @@
   </main>
   <footer>
     <div id="email"> ricardo.romero@iesdonana.org </div>
+    <div id="actualizacion"> Última actualizacion: 28/02/2022</div>
     <div id="redes">
       <a href="https://twitter.com"> <img alt="Link a Twitter." src="img/twitter.png" ></a> 
       <a href="https://instagram.com"> <img alt="Link a Instagram." src="img/instagram.png"></a>
@@ -180,7 +191,17 @@
       if (event.target == modal) {
         modal.style.display = "none";
       }
-    }
+    } 
+
+    // Buscador 
+
+const clearInput = () => {
+  const input = document.getElementsByTagName("input")[0];
+  input.value = "";
+}
+
+const clearBtn = document.getElementById("clear-btn");
+clearBtn.addEventListener("click", clearInput);
     </script>
 </body>
 </html>

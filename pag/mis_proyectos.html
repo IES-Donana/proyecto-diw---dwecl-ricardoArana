@@ -9,14 +9,17 @@
         type="image/ico" 
         href="../img/favicon.ico">
     <script src="/js/script.js" defer></script>
-    <title>Portafolio: Ricardo Romero Arana</title>
+    <title>Mis proyectos: Portafolio Ricardo Romero Arana</title>
   </head>
 <body>
   <header>
-    <div>
-      <img src="../img/logo.png" alt="Imagen de mi logo." id="logo">
+    <div id="video_fondo">
+      <video src="video/fondo.mp4" loop autoplay preload="auto" muted></video>
     </div>
-    <h1> <a href="../index.html"> Mi Portafolio </a></h1>
+    <div id="logoTitulo">
+    <img src="../img/logo.png" alt="Logo del portafolio." id="logo">
+    <h1> <a href="../index.html"> Mi Portafolio</a></h1>
+  </div>
     <div id="link">
     <a href="mis_proyectos.html">&#8226; Mis proyectos</a> <br>
     <a href="contacto.html">&#8226; Contacto</a>
@@ -29,19 +32,26 @@
   </div>
   </div>
   <div id="burger_img">
-    <img id="img" src="../img/burger.png"  alt="Menú hamburguesa.">
+    <img id="img" src="../img/burger.png"  alt="Imagen del menú hamburguesa.">
   </div>
 </div>
   </header>
+  <ul class="breadcrumb">
+    <li><a href="../index.html">Inicio</a></li>
+    <li>Mis proyectos</li>
+  </ul>
   <main>
+    <div class="titulo"> Mis proyectos:</div>
     <div id="proyectos">
 
       <div class="proyecto">
-        <picture>
+        <a href="https://ricardoarana.github.io/Parikiclicker/" title="enlace a clicker">
+          <picture>
           <source srcset="../img/clicker.jpeg" media="(min-width: 700px)">
           <source srcset="../img/clicker-bw.png" media="(max-width: 700px)">
           <img src="../img/clicker.jpeg" alt="Imagen del proyecto: clicker.">
         </picture>
+      </a>
         <p> <b>Clicker:</b> Este proyecto se basa en un tipo de juego llamado "clicker". Está incompleto pero he decidido mostrarlo ya que creo que muestra algunas cualidades en cuanto a la programación front-end. El proyecto se realizó en conjunto con un compañero cuando estudiábamos el ciclo superior de DAW: Pablo Leal del Ojo Bravo.
           <br> <br>
            <a href="https://ricardoarana.github.io/Parikiclicker/">Clicker</a> 
@@ -49,11 +59,14 @@
       </div>
 
       <div class="proyecto">
+        <a href="https://ricardoarana.github.io/Parikiclicker/" title="enlace a pomodoro">
+
         <picture>
           <source srcset="../img/pomodoro.png" media="(min-width: 700px)">
           <source srcset="../img/pomodoro-bw.png" media="(max-width: 700px)">
           <img src="../img/pomodoro.png" alt="Imagen del proyecto: pomodoro.">
         </picture>
+      </a>
         <p> <b>Pomodoro:</b> Este es un proyecto sobre el reloj pomodoro. Este reloj muestra una cuenta atrás completamente configurable sobre el método de trabajo "pomodoro". Se muestran algunas destrezas básicas como el manejo con las horas en tiempo real
         <br> <br>
         <a href="https://ricardoarana.github.io/Parikiclicker/">Pomodoro</a> 
@@ -61,11 +74,13 @@
       </div>
 
       <div class="proyecto">
-        <picture>
+        <a href="https://ricardoarana.github.io/DIW_joyeria/" title="enlace a joyeria">
+          <picture>
           <source srcset="../img/joyeria.jpeg" media="(min-width: 700px)">
           <source srcset="../img/joyeria-bw.jpeg" media="(max-width: 700px)">
-          <img src="../img/joyeria.jpeg" alt="Imagen del proyecto: joyería.">
+          <img src="../img/joyeria.jpeg" alt="Imagen del proyecto: joyería."> 
         </picture>
+      </a>
         <p> <b>Joyería:</b> Se trata de un prototipo de una joyería donde se muestran diferentes secciones tanto para comprar un producto como para rellenar un formulario.
         <br> <br>
         <a href="https://ricardoarana.github.io/DIW_joyeria/">Joyería</a> 
@@ -83,10 +98,11 @@
   </main>
   <footer>
     <div id="email"> ricardo.romero@iesdonana.org </div>
+        <div id="actualizacion"> Última actualizacion: 28/02/2022</div>
     <div id="redes">
-      <a href="https://twitter.com"> <img alt="Link a Twitter" src="img/twitter.png" ></a> 
-      <a href="https://instagram.com"> <img alt="Link a Instagram" src="img/instagram.png"></a>
-      <a href="https://gitbub.com"> <img alt="Link a GitHub" src="img/github.png" ></a> 
+      <a href="https://twitter.com"> <img alt="Link a Twitter" src="../img/twitter.png" ></a> 
+      <a href="https://instagram.com"> <img alt="Link a Instagram" src="../img/instagram.png"></a>
+      <a href="https://gitbub.com"> <img alt="Link a GitHub" src="../img/github.png" ></a> 
     </div>
   </footer>
 </body>

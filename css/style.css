@@ -12,6 +12,7 @@ body {
   opacity: 10%;
 }
 header {
+
   border-bottom: 1px solid black;
     font-family: 'Times New Roman', Times, serif;
     height: 100px;
@@ -31,8 +32,7 @@ header {
   display: none;
 }
 #logo {
-  margin-top: 15px;
-  margin-left: 30px;
+  margin: 15px;
   height: 65px;
   width: auto;
   animation-duration: 2s;
@@ -47,31 +47,58 @@ header {
     margin-top: 15px;
   }
 }
-header > h1 {
+header h1 {
     margin: 0.3em auto 0em;
     padding-left: 4.5em;
     text-align: center;
     font-size: 3em;
     display: block;
 }
+#logoTitulo {
+  width: 100%;
+}
 
 header > #link {
     margin: 3em 3em;
     top: 20px;
-    width: 7em;
+    width: 10em;
     height: 5vh;
     text-align: left;
     float:right; 
     clear:right;
-
 }
-header > h1 > a {
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: black;
+  text-decoration: underline;
+}
+header > #link > a:visited {
+  color: rgb(48, 48, 48);
+} 
+
+header a {
   text-decoration: none;
   color: black;
   transition: color .7s;
 }
 
-header > h1 > a:hover {
+header a:hover {
   color: blue;
 }
 header > #link > a {
@@ -101,6 +128,15 @@ from {
 to {
   margin-left: 12.5vw;
 }
+}
+.titulo {
+  color: rgb(37, 37, 37);
+  margin-top: 2vh;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: xx-large;
+  text-decoration: underline;
 }
 
 #correo {
@@ -155,9 +191,9 @@ main {
     filter: blur(3px);
     transition: .6s ease-in-out;
     padding-left: 3vw;
-    padding-top: 5vh;
-    width: 185px;
-    height: 200px;
+    padding-top: 2vh;
+    width: 170px;
+    height: 220px;
   }
   .imagen:hover > img {
     -webkit-filter: blur(0);
@@ -170,11 +206,13 @@ main {
       font-size: x-large;
   }
   #curriculum > h1{
+    margin-top: 180px;
       text-align: center;
   }
   * {
       box-sizing: border-box;
     }
+
 /* #proyectos {
   display: flex;
   justify-content: space-between;
@@ -184,19 +222,13 @@ main {
   justify-content: space-between;
   padding-top: 30px;
 }
-.proyecto > img {
-  width: 400px;
-  height: 300px;
-  border: solid 1px black;
-  margin: 10px;
-}
-.proyecto > picture > img{
+.proyecto img {
   width: 40vw;
   border: solid 1px black;
   margin: 10px;
   transition: filter 0.5s;
 }
-.proyecto > picture > img:hover {
+.proyecto img:hover {
   filter: grayscale(100%);
 
 }
@@ -348,10 +380,16 @@ main {
     text-decoration: none;
     cursor: pointer;
   }
+  #logoTitulo {
+    display: flex;
+  }
   
   /* Media queries - Se adapta toda la linea del tiempo a la izquierda cuando la pantalla es menor
-                     de 700px */
+                     de 800px */
   @media screen and (max-width: 800px) {
+#video_fondo {
+  display: none;
+}
   /* Situa la linea a la izquierda */
     .timeline::after {
       left: 31px;
@@ -376,6 +414,8 @@ main {
     .left::after, .right::after {
       left: 15px;
     }
+
+    
   
   /* Cambia los contenedores de la derecha para que actuen como los de la izquierda */
     .right {
@@ -395,13 +435,8 @@ main {
     width: 40vw;
   }
 
-  .video > iframe{
-    width: 500px;
-    height: 300px;
-  }
   .video > video{
-    width: 500px;
-    height: 300px;
+    width: 40vw;
   }
   
 #subir > p {
@@ -429,10 +464,25 @@ footer{
     flex-direction: column;
 
   }
+  #logo {
+    animation-duration: 0;
+  }
   #cont_bur {
+    margin-top: 10px;
     display: flex;
     background-color: rgb(92, 201, 252);
+    animation-duration: 2s;
+  animation-name: animacionBurger;
+}
+@keyframes animacionBurger {
+  from {
+    height: 0;
   }
+
+  to {
+    height: 15px;
+  }
+}
   #cerrar {
     width: 10%;
     height: 30px;
@@ -451,21 +501,34 @@ footer{
   }
   #burger_img {
     display: flex;
-  }
-  #burger_img {
     width: 30px;
     height: 30px;
+    animation-duration: 2s;
+    animation-name: animacionBurgerImg;
   }
-
+  @keyframes animacionBurgerImg {
+    from {
+      height: 0;
+    }
+  
+    to {
+      height: 15px;
+    }
+  }
   header {
     display: block;
     border: none;
   }
+  .breadcrumb {
+    margin-top: 10vh;
+  }
   #link {
     display: none;
   }
-  header > h1 {
-    margin: 0px;
+  header h1 {
+
+    width: 80%;
+    margin-top: 15px;
     text-align: center;
     padding-left: 0em;
   }
@@ -505,13 +568,7 @@ footer{
     align-items: center;
     padding-top: 30px;
   }
-  .proyecto > img {
-    margin: 0;
-    width: 100%;
-    height: 75%;
-    border: solid 1px black;
-  }
-  .proyecto > picture > img {
+  .proyecto img {
     margin: 0;
     width: 100%;
     height: 75%;
@@ -551,4 +608,80 @@ footer{
     height: 35px;
     width: 35px;
   }
+  #buscador{
+    position: relative;
+    margin-left: 40vw;
+    margin-top: 5vh;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: rgb(119, 223, 255);
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid rgb(60, 200, 255);
+    padding: 5px;
+  }
+}
+/* Buscador */
+#buscador{
+  position: relative;
+  margin-left: 60vw;
+  margin-top: 5vh;
+  transform: translate(-50%,-50%);
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: rgb(119, 223, 255);
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid rgb(60, 200, 255);
+  padding: 5px;
+}
+
+#buscadorInput{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.fa{
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #07051a;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+}
+
+#buscador:hover,
+#buscador:valid{
+  width: 200px;
+  cursor: pointer;
+}
+
+#buscador:hover input,
+#buscador:valid input{
+  display: block;
+}
+
+#buscador:hover .fa,
+#buscador:valid .fa{
+  background: #07051a;
+  color: white;
 }
